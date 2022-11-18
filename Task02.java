@@ -13,16 +13,14 @@ public class Task02 {
         System.out.print("Введите второе число : ");
         int num2 = iScanner.nextInt();
         iScanner.close();
-        Check(num1, num2);
+        System.out.println(Check(num1, num2));
     }
 
-    public static void Check(int a, int b) {
-        int s = a + b;
-        if (s >= 10 && s <= 20)
-            System.out.println("True");
-        else {
-            System.out.println("False");
+    public static boolean Check(int a, int b) {
+        int sum = a + b;
+        if (sum >= 10 && sum <= 20) {
+            return true;
         }
-        ;
+        return false;
     }
 }
